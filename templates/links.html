@@ -21,9 +21,10 @@
         <div class="links">
             {% if links %}
                 {% for link in links %}
-                <a href="{{ link[1] }}" target="_blank" class="link-button">
-                    <i class="{{ link[2] }}"></i> <!-- Icône dynamique, à partir du champ 'icon' -->
-                    <span>{{ link[0] }}</span> <!-- Nom du lien -->
+                <!-- Modification : redirection via la route /click/{id} -->
+                <a href="{{ url_for('register_click', link_id=link[0]) }}" target="_blank" class="link-button">
+                    <i class="{{ link[3] }}"></i> <!-- Icône dynamique -->
+                    <span>{{ link[1] }}</span> <!-- Nom du lien -->
                 </a>
                 {% endfor %}
             {% else %}
