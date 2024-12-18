@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartlink</title>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Section Couverture et Nom -->
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/backgroung.jpeg') }}" alt="Photo de profil" class="profile-pic">
+            <h1 class="username">Darkson</h1>
+            <p class="subtitle">Accédez à mes contenus facilement</p>
+        </div>
+
+        <!-- Liens principaux -->
+        <div class="links">
+            {% if links %}
+                {% for link in links %}
+                <a href="{{ link[1] }}" target="_blank" class="link-button">
+                    <i class="{{ link[2] }}"></i> <!-- Icône dynamique, à partir du champ 'icon' -->
+                    <span>{{ link[0] }}</span> <!-- Nom du lien -->
+                </a>
+                {% endfor %}
+            {% else %}
+                <p>Aucun lien disponible pour le moment.</p>
+            {% endif %}
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.snapchat.com/fr-FR" target="_blank"><i class="fab fa-snapchat"></i></a>
+        </div>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <p>Cookie Preferences</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+    color: #fff;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.container {
+    background: #1c1c1c;
+    border-radius: 15px;
+    width: 450px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 10px; /* Ajout d'une marge pour éviter que le conteneur touche les bords de l'écran sur les petits appareils */
+}
+
+/* Header avec la photo */
+.header {
+    padding: 30px;
+    background: linear-gradient(to bottom, #ff7e5f, #1c1c1c);
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Boutons de liens */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    padding: 20px 0;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.link-button i {
+    font-size: 1.5rem;
+}
+
+.link-button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Réseaux sociaux */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff7e5f;
+    transform: translateY(-5px);
+}
+
+/* Pied de page */
+.footer {
+    font-size: 0.8rem;
+    color: #aaa;
+    padding-bottom: 15px;
+}
+
+/* --- Réactivité --- */
+
+/* Pour les petits écrans (téléphones) */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;  /* La largeur du conteneur prend maintenant 90% de l'écran */
+        padding: 15px;  /* Un peu de padding pour l'intérieur */
+    }
+
+    .profile-pic {
+        width: 150px;  /* Réduit la taille de la photo de profil */
+        height: 150px;
+    }
+
+    .username {
+        font-size: 1.2rem;  /* Réduit la taille du texte */
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .link-button {
+        font-size: 0.9rem;  /* Réduit la taille des boutons de liens */
+        padding: 15px 0;
+    }
+
+    .link-button i {
+        font-size: 1.2rem;  /* Réduit la taille des icônes dans les boutons */
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;  /* Réduit la taille des icônes sociales */
+    }
+
+    .footer {
+        font-size: 0.7rem;  /* Réduit la taille du texte du pied de page */
+    }
+}
+
+/* Pour les tablettes et écrans de taille moyenne */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 85%;  /* La largeur du conteneur passe à 85% sur les tablettes */
+    }
+
+    .profile-pic {
+        width: 180px;  /* Réduit légèrement la taille de la photo */
+        height: 180px;
+    }
+
+    .username {
+        font-size: 1.4rem;  /* Réduit légèrement la taille du texte */
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+    }
+
+    .link-button {
+        font-size: 1rem;  /* Taille de texte normale pour les boutons */
+        padding: 18px 0;
+    }
+
+    .link-button i {
+        font-size: 1.4rem;  /* Taille moyenne des icônes dans les boutons */
+    }
+
+    .social-icons a {
+        font-size: 1.6rem;  /* Taille moyenne des icônes sociales */
+    }
+
+    .footer {
+        font-size: 0.75rem;  /* Taille réduite du texte du pied de page */
+    }
+}
+
+/* Pour les grands écrans */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 450px;  /* Sur les grands écrans, le conteneur reprend sa largeur initiale */
+    }
+
+    .profile-pic {
+        width: 200px;  /* Photo de profil taille normale */
+        height: 200px;
+    }
+
+    .username {
+        font-size: 1.5rem;  /* Taille du texte normale */
+    }
+
+    .link-button {
+        font-size: 1rem;  /* Taille normale des boutons */
+    }
+}
